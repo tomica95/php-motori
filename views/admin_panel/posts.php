@@ -13,6 +13,7 @@
         <td>Sadrzaj</td>
         <td>Datum kreiranja</td>
         <td>Username</td>
+        <td>Slika</td>
 
     </tr>
 <?php foreach($posts as $post):?>
