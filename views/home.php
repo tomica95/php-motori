@@ -5,6 +5,23 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+
+        <?php include 'php/get_poll.php';
+
+          echo $poll_question->question;
+
+          echo "</br>";
+
+          foreach ($answers as $answer)
+          {
+            echo "
+            <input type='radio' name='poll' class='poll-answer' value='$answer->answer'>". $answer->answer."</br>";
+            
+          }
+
+          echo "<input type='hidden' id='poll_id' value='$poll_question->id_poll'>";
+          ?>
+          <div id="poll_result"></div>
           
           
           <?php foreach($posts as $post): ?>

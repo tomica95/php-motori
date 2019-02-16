@@ -36,6 +36,9 @@ session_start();
         case"adminpanel":
             include "views/admin_panel/admin_panel.php";
             break;
+        case"about":
+            include "views/about.php";
+            break;
         
 
         default: 
