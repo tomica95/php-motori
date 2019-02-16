@@ -28,7 +28,7 @@
         $greske[]="Podnaslov los";
     }
     if(empty($sadrzaj)){
-        $greske[]="Contenct nepostojec";
+        $greske[]="Content nepostojec";
     }
 
     if(count($greske)>0){

@@ -11,6 +11,8 @@
 
     $sadrzaj = $_REQUEST['content'];
 
+    $id_post = $_REQUEST['post'];
+
     $greske = [];
 
     if(empty($naslov)){
@@ -21,8 +23,12 @@
         $greske[]="Podnaslov los";
     }
     if(empty($sadrzaj)){
-        $greske[]="Contenct nepostojec";
+        $greske[]="Sadrzaj nepostojec";
     }
+    if($id_post=="0"){
+        $greske[]="Morate izabrati post za izmenu";
+    }
+
 
     if(count($greske)>0){
 
@@ -35,7 +41,7 @@
         'naslov'=>$naslov,
         'podnaslov'=>$podnaslov,
         'text'=>$sadrzaj,
-        'id'=>$_REQUEST['post']
+        'id'=>$id_post
     ]);
 
     Header("Location:../../index.php?page=adminpanel");

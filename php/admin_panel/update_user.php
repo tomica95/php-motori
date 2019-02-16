@@ -25,6 +25,8 @@
     
     $regPassword = "/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/";
 
+    $id_user =$_REQUEST['user'];
+
     
     $greske = [];
 
@@ -41,6 +43,11 @@
        
         $greske[]="Password nije okej";
     }
+    if($id_user=="0"){
+        $greske[]="Morate izabrati usera";
+    }
+
+
     
 
     if(count($greske)>0){
@@ -56,7 +63,7 @@
         'username'=>$username,
         'password'=>$passwordcript,
         'email'=>$email,
-        'id'=>$_REQUEST['user']
+        'id'=>$id_user
 
     ]);
 
