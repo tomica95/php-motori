@@ -5,14 +5,10 @@
        Naslov: <input type="text" name="title"></br>
        Podnaslov: <input type="text" name="subtitle"></br>
        Sadrzaj: <textarea name="content"></textarea></br>
-       Slika: <input type="file" name="picture">
-       Alt:<input type="text" name="alt">
+       Slika: <input type="file" name="picture"></br>
+       Alt:<input type="text" name="alt"></br>
 
-
-
-
-
-        <input type="submit">
+        <input type="submit" value="Unesi post">
     </form>
 
 

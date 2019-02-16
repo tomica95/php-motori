@@ -1,6 +1,7 @@
 <?php
     session_start();
     include "../connection.php";
+    
     $naslov = $_REQUEST['title'];
     $podnaslov = $_REQUEST['subtitle'];
     $sadrzaj = $_REQUEST['content'];
@@ -16,6 +17,27 @@
     
     $insert_post = "INSERT INTO posts VALUES ('',:title,:subtitle,:text,:id_user,:created_at)";
     $stmt = $connection->prepare($insert_post);
+   
+    $greske = [];
+
+    if(empty($naslov)){
+
+        $greske[]="Naslov los";
+    }
+    if(empty($podnaslov)){
+        $greske[]="Podnaslov los";
+    }
+    if(empty($sadrzaj)){
+        $greske[]="Contenct nepostojec";
+    }
+
+    if(count($greske)>0){
+
+        echo "Forma nije popunjena u dobrom formatu";
+    }
+    else
+    {
+   
     try{
     $proslo = $stmt->execute([
         'title'=>$naslov,
@@ -48,4 +70,5 @@
 catch(PDOException $e){
     echo $e->getMessage();
 }
+    }
 ?>
