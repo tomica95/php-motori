@@ -16,7 +16,7 @@
             "id"=>$id
         ]);
 
-       $prikazPostova = "SELECT * FROM posts p INNER JOIN users u ON p.user_id=u.id_user";
+       $prikazPostova = "SELECT * FROM posts p INNER JOIN users u ON p.user_id=u.id_user INNER JOIN pictures s ON p.id_post=s.post_id";
 
        $stmt=$connection->prepare($prikazPostova);
 

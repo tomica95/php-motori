@@ -210,6 +210,7 @@ $(document).ready(function(){
                 <td>Sadrzaj</td>
                 <td>Datum kreiranja</td>
                 <td>Username</td>
+                <td>Slika</td>
         
                   </tr>
 
@@ -229,6 +230,7 @@ $(document).ready(function(){
                     <td>${post['text']}</td>
                     <td>${post['created_at']}</td>
                     <td>${post['username']}</td>
+                    <td><img src="${post['src']}" alt="${post['alt']}" width="50px" height="50px"></td>
                     <td>
                     <input type="button" class="deletePost" value="Obrisi" name="deletePost" id="${post['id_post']}">
                    </td>

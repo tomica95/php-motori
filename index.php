@@ -36,6 +36,7 @@ session_start();
         case"adminpanel":
             include "views/admin_panel/admin_panel.php";
             break;
+        
 
         default: 
         http_response_code(404);
