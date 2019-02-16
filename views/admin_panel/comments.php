@@ -27,3 +27,19 @@
     </tr>
     <?php endforeach;?>
 </table>
+
+<hr>Editovanje komentara
+<form method="POST" action="php/admin_panel/update_comment.php">
+    <select name="comment">
+        <option>Izaberi komentar</option>
+        <?php foreach($comments as $comment):?>
+        <option value="<?=$comment->id_comment?>"><?=$comment->title?></option>
+<?php endforeach; ?>
+
+    
+</select>
+    </br>
+    Naslov komentara:<input type="text" name="title"></br>
+    Sadrzaj komentara:<input type="text" name="content"></br>
+    <input type="submit" value="Edituj komentar">
+</form>

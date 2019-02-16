@@ -43,9 +43,9 @@
 <?php endforeach; ?>
     </select>
 </br>
-     Naslov: <input type="text" name="title"></br>
-       Podnaslov: <input type="text" name="subtitle"></br>
-       Sadrzaj: <textarea name="content"></textarea></br>
+    Naslov: <input type="text" name="title"></br>
+    Podnaslov: <input type="text" name="subtitle"></br>
+    Sadrzaj: <textarea name="content"></textarea></br>
        
        
 
