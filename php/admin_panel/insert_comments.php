@@ -13,13 +13,23 @@ include "../connection.php";
 
         $user_id = $_SESSION['user']->id_user;
 
-        
-
         $id_posta = $_REQUEST['com_select'];
 
-        if($id_posta=="0")
+        $greske=[];
+
+        if($id_posta=="0"){
+            $greske[]="Morate izabrati post";
+        }
+        if(empty($naslov)){
+            $greske[]="Morate uneti naslov";
+        }
+        if(empty($sadrzaj)){
+            $greske[]="Morate imati sadrzaj";
+        }
+
+        if(count($greske)>0)
         {
-            echo "<h2>Morate izabrati post</h2>";
+            echo "<h2>Forma nije popunjena u dobrom formatu</h2>";
         }
         else
         {
