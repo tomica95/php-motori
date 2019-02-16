@@ -182,7 +182,7 @@ $(document).ready(function(){
 
     })
 
-    $('.deletePost').on('click',function(){
+    $('#primacPostova').on('click','.deletePost',function(){
 
         let id_posta = $(this).attr('id');
 
@@ -197,6 +197,7 @@ $(document).ready(function(){
             },
             success:function(vracaa){
 
+                console.log(vracaa);
 
                 let postovi = JSON.parse(vracaa);
 
@@ -218,6 +219,7 @@ $(document).ready(function(){
                 postovi.forEach(function(post){
 
 
+                    
                     tabela+=`
 
                     <tr>
@@ -226,7 +228,7 @@ $(document).ready(function(){
                     <td>${post['subtitle']}</td>
                     <td>${post['text']}</td>
                     <td>${post['created_at']}</td>
-                    <td${post['username']}></td>
+                    <td>${post['username']}</td>
                     <td>
                     <input type="button" class="deletePost" value="Obrisi" name="deletePost" id="${post['id_post']}">
                    </td>

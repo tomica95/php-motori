@@ -24,11 +24,13 @@
         ]);
 
 
-        $ispis_komentara = "SELECT * FROM comments c INNER JOIN users u ON c.user_id=u.id_user";
+        $ispis_komentara = "SELECT * FROM comments c INNER JOIN users u ON c.user_id=u.id_user WHERE post_id=:id";
 
         $stmt=$connection->prepare($ispis_komentara);
 
-        $stmt->execute();
+        $stmt->execute([
+            'id'=>$post_id
+        ]);
 
         $komentari=$stmt->fetchAll();
 

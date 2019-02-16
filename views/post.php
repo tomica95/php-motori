@@ -43,9 +43,10 @@
 
 <div id="primac-komentara">
 
-<?php include "php/comments.php" ?>
+
 
 <?php endif; ?>
+<?php include "php/comments.php" ?>
 <?php foreach($comments as $comment):?>
 
   Title:<?=$comment->title?></br>
