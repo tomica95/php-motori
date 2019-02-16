@@ -31,8 +31,32 @@
 
 
 <?php endforeach; ?>
-
 </table>
+
+<!-- update korisnika -->
+<hr>Editovanje user-a
+</br>
+<form method="POST" action="php/admin_panel/update_user.php">
+    Username user-a za editovanje<select name="user">
+        <option>Izaberite korisnika</option>
+        <?php foreach($users as $user): ?>
+        <option value="<?=$user->id_user?>"><?=$user->username?></option>
+        <?php endforeach; ?>
+    </select>
+</br>
+    Email:<input type="text" name="email"></br>
+
+    Username:<input type="text" name="username"></br>
+
+    Password:<input type="password" name="password"></br>
+
+    <input type="submit" value="Izmeni user-a">
+</form>
+
+
+
+
+
 <h1>Unos user-a</h1>
 <!--unos korisnika -->
 <form method="POST" action="php/admin_panel/insert_users.php">

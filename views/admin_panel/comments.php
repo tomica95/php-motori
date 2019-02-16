@@ -30,7 +30,7 @@
 
 <hr>Editovanje komentara
 <form method="POST" action="php/admin_panel/update_comment.php">
-    <select name="comment">
+    Izaberite komentar za editovanje<select name="comment">
         <option>Izaberi komentar</option>
         <?php foreach($comments as $comment):?>
         <option value="<?=$comment->id_comment?>"><?=$comment->title?></option>

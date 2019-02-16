@@ -36,7 +36,7 @@
 <hr>Editovanje posta
 <form method="POST" action="php/admin_panel/update_post.php">
 
-    <select name="post">
+    Izaberite post za editovanje<select name="post">
     <option value="0">Izaberi post</option>
         <?php foreach($posts as $post):?>
         <option value="<?=$post->id_post?>"><?=$post->title?></option>
