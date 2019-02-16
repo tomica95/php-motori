@@ -34,7 +34,8 @@
 </table>
 
 <!-- update korisnika -->
-<hr>Editovanje user-a
+<hr>
+<h2>Editovanje user-a</h2>
 </br>
 <form method="POST" action="php/admin_panel/update_user.php">
     Username user-a za editovanje<select name="user">

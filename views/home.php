@@ -19,7 +19,7 @@
                   </h3>
                 </a>
                 <p class="post-meta">Posted by <?= $post->username ?>
-                  <a href="#">Start Bootstrap</a>
+                  <a href="#">Motorcikli</a>
                   on <?= $post->created_at ?></p>
               </div>
               <hr>

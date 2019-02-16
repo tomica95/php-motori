@@ -1,3 +1,14 @@
+<div id="drzac">
+    <style>
+        #drzac{
+            width: 600px;
+            margin: 0 auto; 
+
+           
+        }
+    
+    </style>
+
 <?php
     
     include "views/admin_panel/users.php";
@@ -13,3 +24,6 @@
     
 
 ?>
+
+
+</div>

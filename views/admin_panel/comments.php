@@ -28,7 +28,8 @@
     <?php endforeach;?>
 </table>
 
-<hr>Editovanje komentara
+<hr>
+<h2>Editovanje komentara</h2>
 <form method="POST" action="php/admin_panel/update_comment.php">
     Izaberite komentar za editovanje<select name="comment">
         <option>Izaberi komentar</option>

@@ -34,7 +34,8 @@
 <?php endforeach; ?>
 </table>
 
-<hr>Editovanje posta
+<hr>
+<h2>Editovanje posta</h2>
 <form method="POST" action="php/admin_panel/update_post.php">
 
     Izaberite post za editovanje<select name="post">

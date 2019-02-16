@@ -26,8 +26,8 @@
             </div>
             <div class="control-group">
               <div class="form-group floating-label-form-group controls">
-                <label>Email Address</label>
-                <input type="email" class="form-control" placeholder="Email Address" id="tbEmail" required name="tbEmail">
+                <label>Email Adresa</label>
+                <input type="email" class="form-control" placeholder="Email Adresa" id="tbEmail" required name="tbEmail">
                 <p class="help-block " id="mail-mistake"></p>
               </div>
             </div>
@@ -48,7 +48,7 @@
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button type="submit" class="btn btn-primary" id="sendMessageButton" name="sendMessageButton">Send</button>
+              <button type="submit" class="btn btn-primary" id="sendMessageButton" name="sendMessageButton">Registruj se</button>
             </div>
           </form>
         </div>
